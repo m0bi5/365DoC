@@ -1,10 +1,13 @@
 class Solution:
-    def minCostClimbingStairs(self, cost):
+    def maxProduct(self, nums):
         """
-        :type cost: List[int]
+        :type nums: List[int]
         :rtype: int
         """
-        f1 = f2 = 0
-        for x in reversed(cost):
-            f1, f2 = x + min(f1, f2), f1
-        return min(f1, f2)
+        if not nums:
+            return 0
+        ret = max_num = min_num = nums[0]
+        for num in nums[1:]:
+            min_num, _, max_num = sorted([num, num * max_num, num * min_num])
+            ret = max(max_num, ret)
+        return ret
