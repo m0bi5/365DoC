@@ -1,10 +1,16 @@
 class Solution:
-    def minCostClimbingStairs(self, cost):
+    def maxProfit(self, prices):
         """
-        :type cost: List[int]
+        :type prices: List[int]
         :rtype: int
         """
-        f1 = f2 = 0
-        for x in reversed(cost):
-            f1, f2 = x + min(f1, f2), f1
-        return min(f1, f2)
+        
+        
+        profit=0
+        minprice=999999999999
+        for i in prices:
+            if i<minprice:
+                minprice=i
+            elif i-minprice>profit:
+                profit=i-minprice
+        return profit
