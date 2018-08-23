@@ -1,18 +1,19 @@
 <h1>Question</h1>
 
- On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Write a program to find the n-th ugly number.
 
-Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5. 
+
 ```
-Example 1:
+Example:
 
-Input: cost = [10, 15, 20]
-Output: 15
-Explanation: Cheapest is start on cost[1], pay that cost and go to the top.
+Input: n = 10
+Output: 12
+Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.
 
-Example 2:
+Note:  
 
-Input: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
-Output: 6
-Explanation: Cheapest is start on cost[0], and only step on 1s, skipping cost[3].
+1) 1 is typically treated as an ugly number.
+2) n does not exceed 1690.
+
 ```
